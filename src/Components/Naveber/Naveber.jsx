@@ -22,7 +22,7 @@ const Naveber = () => {
                 <FaBars/>
             </div>
         </div>
-        <div className='hidden md:block'>
+        <div className='hidden md:block max-w-[1200px] border-r border-l h-[1111px] mx-auto'>
             <div className='w-full h-[80px] flex text-white justify-between items-center px-5'>
                 <div id='logo' className=''>
                     <a href="/">
