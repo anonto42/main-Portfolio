@@ -1,3 +1,4 @@
+import { FaHandPointRight } from 'react-icons/fa'
 import { FaBars} from 'react-icons/fa6'
 
 const Naveber = () => {
@@ -45,7 +46,7 @@ const Naveber = () => {
                         <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Projects</div>
                     </a>
                     <a href="">
-                        <div className='bg-[] ml-4 w-[105px] h-[40px] flex justify-center items-center rounded-full text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b]'>Say Hello</div>
+                        <div className='bg-[] ml-4 w-[125px] h-[40px] flex justify-center items-center rounded-full text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b]'>Poke Me <FaHandPointRight className='ml-2' /></div>
                     </a>
                 </div>
             </div>
