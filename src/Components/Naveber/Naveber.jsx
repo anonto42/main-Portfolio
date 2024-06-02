@@ -23,7 +23,7 @@ const Naveber = () => {
                     <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Say Hello</h3>
                 </a>
             </div>
-            <div className='md:hidden right-0 top-5 absolute w-[45px] h-[35px] cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b] rounded-xl flex justify-center items-center text-white text-[22px] font-thin'>
+            <div className='md:hidden right-5 top-5 fixed w-[45px] h-[35px] cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b] rounded-xl flex justify-center items-center text-white text-[22px] font-thin'>
                 <FaBars/>
             </div>
         </div>

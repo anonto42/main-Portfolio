@@ -4,6 +4,67 @@ body{
   font-family: "Poppins", sans-serif;;
 }
 
-/* #nav:checked ~ div>#boxDrop{
-  top:0px;
-} */
+.animation_up_down1{
+  animation: animation-1 2.5s infinite ease-in-out;
+}
+@keyframes animation-1 {
+  0%{
+    transform: translatey(0);
+  }
+  50%{
+    transform: translatey(-14px);
+  }
+}
+
+@media (max-width: 768px) {
+
+  .animation_up_down{
+    animation-name: animation_up_down;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes animation_up_down{
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(-12px);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .animation_up_down2{
+    animation-name: up_down;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes up_down{
+    0%{
+      transform: translate(0);
+    }
+    50%{
+      transform: translate(-35px,-105px);
+    }
+  }
+}
+@media (min-width: 768px) {
+  .animation_up_down01{
+    animation-name: up_down01;
+    animation-duration: 6s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes up_down01{
+    0%{
+      transform: translate(0);
+    }
+    50%{
+      transform: translate(110px,-80px);
+    }
+  }
+}
