@@ -4,10 +4,12 @@ import Footer from '../../Components/Footer/Footer'
 
 const Layout = ({children}) => {
   return (
-    <div className='w-full h-svh from-[#111122] bg-gradient-to-b to-[#1a1a33] relative'>
+    <div className='w-full h-auto from-[#111122] bg-gradient-to-b to-[#1a1a33]'>
+      <div className='max-w-[1200px] mx-auto px-5 border-r border-l '>
         <Naveber />
         <div>{children}</div>
         <Footer />
+      </div>
     </div>
   )
 }
