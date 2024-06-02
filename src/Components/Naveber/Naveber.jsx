@@ -31,14 +31,22 @@ const Naveber = () => {
             <div className='w-full h-[80px] flex text-white justify-between items-center'>
                 <div id='logo' className=''>
                     <a href="/">
-                        <h1 className='flex relative uppercase font-bold italic text-[18px]'>sohidul Islam Ananto<div className='w-[3px] absolute bottom-1 -right-2 rounded-full h-[3px] bg-[#80b4f4]'></div></h1>
+                        <h1 className='flex relative uppercase font-bold italic text-[22px]'>sohidul Islam Ananto<div className='w-[3px] absolute bottom-1 -right-2 rounded-full h-[3px] bg-[#80b4f4]'></div></h1>
                     </a>
                 </div>
                 <div className='flex'>
-                    <div className='bg-[] mr-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Home</div>
-                    <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>About Me</div>
-                    <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Projects</div>
-                    <div className='bg-[] ml-4 w-[105px] h-[40px] flex justify-center items-center rounded-full text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b]'>Say Hello</div>
+                    <a href="">
+                        <div className='bg-[] mr-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Home</div>
+                    </a>
+                    <a href="">
+                        <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>About Me</div>
+                    </a>
+                    <a href="">
+                        <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Projects</div>
+                    </a>
+                    <a href="">
+                        <div className='bg-[] ml-4 w-[105px] h-[40px] flex justify-center items-center rounded-full text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b]'>Say Hello</div>
+                    </a>
                 </div>
             </div>
         </div>
