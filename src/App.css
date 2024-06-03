@@ -68,3 +68,18 @@ body{
     }
   }
 }
+
+.round{
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scale: 1.5;
+  color: #1C222A;
+  box-shadow: 0 0px 8px rgba(255, 255, 255, 0.685), 
+              0 0px 20px rgba(255, 255, 255, 0.086), 
+              0 0px 40px rgba(255, 255, 255, 0.1) ;
+}
