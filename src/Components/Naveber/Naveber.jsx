@@ -11,17 +11,17 @@ const Naveber = () => {
         </div>
         <div>
             <div id='boxDrop' className='bg-[#80b4f4] shadow-md shadow-[#ffffff7b] w-[350px] sm:w-[530px] md:hidden h-[200px] rounded-md absolute left-3 -top-[200px] duration-200 ease-out'>
-                <a href="">
+                <a href="/">
                     <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Home</h3>
                 </a>
-                <a href="">
+                <a href="/aboute/me">
                     <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>About Me</h3>
                 </a>
-                <a href="">
-                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Courses</h3>
+                <a href="/aboute/my-project">
+                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Project</h3>
                 </a>
-                <a href="">
-                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Say Hello</h3>
+                <a href="/contact-me">
+                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Poke Me</h3>
                 </a>
             </div>
             <div className='md:hidden right-5 top-5 fixed w-[45px] h-[35px] cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b] rounded-xl flex justify-center items-center text-white text-[22px] font-thin'>
@@ -36,16 +36,16 @@ const Naveber = () => {
                     </a>
                 </div>
                 <div className='flex'>
-                    <a href="">
+                    <a href="/">
                         <div className='bg-[] mr-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Home</div>
                     </a>
-                    <a href="">
+                    <a href="/aboute/me">
                         <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>About Me</div>
                     </a>
-                    <a href="">
+                    <a href="aboute/my-project">
                         <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Projects</div>
                     </a>
-                    <a href="">
+                    <a href="/contact-me">
                         <div className='bg-[] ml-4 w-[125px] h-[40px] flex justify-center items-center rounded-full text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b]'>Poke Me <FaHandPointRight className='ml-2' /></div>
                     </a>
                 </div>
