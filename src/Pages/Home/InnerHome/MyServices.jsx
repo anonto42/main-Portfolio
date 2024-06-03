@@ -3,8 +3,8 @@ import { FaHandPointRight, FaLaptopCode } from "react-icons/fa";
 
 const MyServices = () => {
   return (
-    <div className='min-h-[80vh] w-full text-white'>
-        <div className='w-full flex justify-center mt-12 mb-[50px] text-center'>
+    <div className='min-h-[80vh] md:min-h-[300px] w-full text-white'>
+        <div className='w-full flex justify-center mt-20 mb-[50px] text-center'>
             <div>
                 <h1 className='text-[30px] md:text-[40px] font-bold'>My Services</h1>
                 <h4 className='text-[25px] md:text-[30px] font-semibold italic text-[#88B8F4] -mt-3'>What I Do</h4>
