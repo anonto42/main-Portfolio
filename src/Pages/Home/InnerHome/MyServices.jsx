@@ -7,7 +7,7 @@ const MyServices = () => {
         <div className='w-full flex justify-center mt-12 mb-[50px] text-center'>
             <div>
                 <h1 className='text-[30px] md:text-[40px] font-bold'>My Services</h1>
-                <h4 className='text-[25px] md:text-[30px] font-semibold italic text-[#88B8F4]'>What I Do</h4>
+                <h4 className='text-[25px] md:text-[30px] font-semibold italic text-[#88B8F4] -mt-3'>What I Do</h4>
             </div>
         </div>
         <div className='md:flex justify-between lg:px-6 xl:px-20'>
