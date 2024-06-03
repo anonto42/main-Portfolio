@@ -14,30 +14,30 @@ const Contact =()=>{
         </div>
         <div className='md:flex justify-between lg:px-6 xl:px-20'>
             <div className='bg-[#1C222A] mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto'>
-                <div className='text-[80px] flex justify-center md:text-[45px] text-[#88B8F4]'>
+                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
                     <FaUserTie />
                 </div>
                 <div className='text-center'>
-                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>Sohidul Islam Ananto</h1>
-                    <p className='text-[20px] italic font-semibold md:text-[12px]'>Web Developer (MERN)​</p>
+                    <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>Sohidul Islam Ananto</h1>
+                    <p className='text-[14px] italic font-semibold md:text-[12px]'>Web Developer (MERN)​</p>
                 </div>
             </div>
-            <div className='bg-[#1C222A] mb-[50px] w-full lg:w-[320px] md:w-[280px] md:mx-1 rounded-2xl shadow-xl py-9 px-9 h-[340px] md:h-auto '>
-                <div className='text-[80px] flex justify-center md:text-[45px] text-[#88B8F4]'>
+            <div className='bg-[#1C222A] mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto md:mx-1'>
+                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
                     <PiStudentDuotone />
                 </div>
                 <div className='text-center'>
-                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>student</h1>
-                    <p className='text-sm italic font-semibold md:text-[12px]'>CSE (ENROLLED).</p>
+                    <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>student</h1>
+                    <p className='text-[14px] italic font-semibold md:text-[12px]'>CSE (ENROLLED)</p>
                 </div>
             </div>
-            <div className='bg-[#1C222A] mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 h-[340px] md:h-auto'>
-                <div className='text-[80px] flex justify-center md:text-[45px] text-[#88B8F4]'>
+            <div className='bg-[#1C222A] mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto'>
+                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
                     <MdMarkEmailRead />
                 </div>
                 <div className='text-center'>
-                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>email</h1>
-                    <p className='text-sm italic font-semibold md:text-[12px]'>anontom90@gmail.com</p>
+                    <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>email</h1>
+                    <p className='text-[14px] italic font-semibold md:text-[12px]'>anontom90@gmail.com</p>
                 </div>
             </div>
         </div>
