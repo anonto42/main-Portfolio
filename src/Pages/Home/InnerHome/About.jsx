@@ -1,11 +1,12 @@
 import React from 'react'
+import { BsEmojiSunglassesFill } from 'react-icons/bs'
 
 const About = () => {
 
   return (
     <div className='h-auto w-full'>
-      <div className='w-full h-[500px] md:hidden bg-[gray] rounded-full'>
-        <img src="" alt="" /> 
+      <div className='w-full h-[430px] md:hidden border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
+        <img src="/Profile.png" className='sm:w-[80%] contrast-[1.25]' alt="" /> 
         {/* i should add an image in heare */}
       </div>
       <div className='text-white mt-3 md:flex justify-between'>
@@ -20,16 +21,17 @@ const About = () => {
         </div>
         <div>
           <div className='image hidden md:block'>
-            <div className='w-[500px] h-[500px] rounded-full border-2'>
-              <img src="" alt="" />
+            <div className='w-[500px] h-[500px] rounded-full border-[3px] border-[#80b4f4] flex justify-center overflow-hidden relative'>
+              <img src="/Profile.png" className=' contrast-[1.25] -saturate-[1.2]' alt="" />
+              <BsEmojiSunglassesFill className=' absolute top-[290px] left-[140px] border-2 shadow-md border-[#80b4f4] text-[#80b4f4] text-[40px] bg-white rounded-full' />
             </div>
           </div>
           <div id='' className='animation_up_down animation_up_down01 flex justify-center items-center w-[95%] h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:-ml-[40px] md:px-8 md:bg-[#18182E] md:-mt-12 relative'>
-            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'12'}+</h1>
+            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'1.5'}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Years of Experience</p>
           </div>
           <div id='' className='animation_up_down animation_up_down2 flex justify-center items-center w-[95%] mt-3 h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:ml-[105px] md:px-8 md:bg-[#18182E] md:mt-16 relative'>
-            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'102'}+</h1>
+            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'10'}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Completed Projects</p>
           </div>
         </div>
