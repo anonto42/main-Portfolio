@@ -22,7 +22,7 @@ const Footer = () => {
         </div>
       </div>
       <div className='pt-4'>
-        <h5 className='text-[#80b4f4]'>© All Rights Reserved 2015 - 2023 | Sohidul Islam Ananto</h5>
+        <h5 className='text-[#80b4f4]'>© All Rights Reserved 2024 - 2027 | Sohidul Islam Ananto</h5>
       </div>
     </div>
   )
