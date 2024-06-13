@@ -6,7 +6,6 @@ import Aboutme from './Pages/Aboutme/Aboutme'
 import Project from './Pages/Projects/Project'
 import Login from './Pages/Login/Login'
 import PokeMe from './Pages/Poke/PokeMe';
-import { PiExportBold } from 'react-icons/pi'
 import Admin from './Pages/Dashbord/Admin';
 
 function App() {
