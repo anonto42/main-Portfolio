@@ -23,7 +23,7 @@ const About = () => {
           <h1 className='text-[30px] gsap_animation font-bold'>Sohidul Islam Ananto</h1>
           <h2 className='text-[27px] gsap_animation gsap_animation font-bold text-[#80b4f4]'>I AM Web Developer</h2>
           <p className='gsap_animation'>From Dhaka, Bangladesh. I’m a (MERN) stack Web developer who is passionate about making error-free websites. I love to write code's. </p>
-          <a href="/">
+          <a href="/contact-me">
             <button id='' className='animation_up_down1 hover:bg-[#232323] bg-[#80b4f4] duration-300 ease-out hover:px-3 hover:text-white font-semibold text-[#1A1A33] px-1 py-2 w-[95px] rounded-xl text-[16px] shadow-md shadow-[#ffffff7b] my-[35px]'>Contact</button>
           </a>
         </div>
