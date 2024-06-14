@@ -51,7 +51,7 @@ const PokeMe = () => {
         </div>
         <div className='w-full mb-4'>
           <h1 className='font-thin'>What do you want to do</h1>
-          <textarea rows={7} cols={40} placeholder='Your Name' type="text" className='w-full outline-none md:w-[700px] py-2 border bg-[#141427] rounded-xl px-4 mt-3 placeholder:font-serif'/>
+          <textarea rows={7} cols={40} placeholder='Write here...' type="text" className='w-full outline-none md:w-[700px] py-2 border bg-[#141427] rounded-xl px-4 mt-3 placeholder:font-serif'/>
         </div>
 
 
