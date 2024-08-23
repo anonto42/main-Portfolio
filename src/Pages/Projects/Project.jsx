@@ -1,9 +1,28 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Layout from './../Layout/Layout';
 import Projects from './Cart/Projects';
-import { data } from '../../../data';
+import axios from 'axios';
+import { data } from 'autoprefixer';
 
 const Project = () => {
+
+  const [ProjectsData, setData] = useState([]);
+
+  useEffect(()=>{
+    axios.get("/admin/getProjecs")
+    .then(response => {
+      const result = response.data;
+      if (Array.isArray(result)) {
+        setData(result);
+      } else {
+        console.error('Expected an array but got:', result);
+      }
+    })
+    .catch( data => console.log(data));
+  },[]);
+
+  console.log(ProjectsData)
+
   return (
     <Layout>
       <div className='min-h-[100svh] w-full'>
@@ -12,11 +31,9 @@ const Project = () => {
         </div>
         <div className='w-full h-auto flex justify-center flex-wrap'>
           {
-            data.map((e,index)=>{
-              return <Projects key={index} imgUrl={e.photoUrl} liveLink={e.liveLink} repoLink={e.repoLink} />
-          })
+            ProjectsData.map( (e,i) => <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />)
+            // data.map((e,index) => <Projects key={index} imgUrl={e.photoUrl} liveLink={e.liveLink} repoLink={e.repoLink} />)
           }
-          
         </div>
       </div>
     </Layout>
