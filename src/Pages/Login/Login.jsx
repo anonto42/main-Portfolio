@@ -5,7 +5,7 @@ const Login = () => {
   const [email,setEmail] = useState('');
   const [pass,setPass] = useState('');
   const loginFun = () =>{
-    if (email == "anontom90@gmail.com" && pass == "admin_login") {
+    if (email == "anonto1080") {
       localStorage.setItem("sohidul-islam-ananto",JSON.stringify(true));
       window.location.href = '/login/admin';
     }else{
