@@ -6,10 +6,10 @@ const Message = ( { email , name , work } ) => {
     <div className='w-full rounded-md min-h-[60px] bg-[#4285F4] mt-5'>
         {/* Information */}
         <div className='flex italic text-sm justify-around px-3 py-3 w-full text-white'>
-            <div className='border-r w-[50%] border-white'>
+            <div className=' w-[400px] text-center'>
                 <h3>{name}</h3>
             </div>
-            <div className=''>
+            <div className='w-[400px] text-center'>
                 <h3>{email}</h3>
             </div>
         </div>
@@ -19,7 +19,7 @@ const Message = ( { email , name , work } ) => {
         </div>
         {/* Delete message */}
         <div className='w-full h-[50px] border-t border-white mt-3 flex justify-center items-center'>
-            <div onClick={()=>console.log("Message was deleted")} className='text-white text-xl cursor-pointer active:scale-105 duration-100'>
+            <div onClick={()=>console.log("Message was deleted")} className='text-white hover:text-red-700 text-xl cursor-pointer active:scale-105 duration-100'>
                 <ImBin />
             </div>
         </div>
