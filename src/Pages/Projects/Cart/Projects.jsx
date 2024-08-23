@@ -3,7 +3,8 @@ import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
 
-const Projects = ({imgUrl,liveLink,repoLink}) => {
+const Projects = ({imgUrl,liveLink,repoLink,title}) => {
+    
     gsap.registerPlugin(ScrollTrigger);
     useGSAP(()=>{
 
@@ -12,6 +13,9 @@ const Projects = ({imgUrl,liveLink,repoLink}) => {
         <div className='bg-[#1C222A] mb-[50px] w-full md:w-[380px] rounded-2xl shadow-xl py-5 px-5 mr-6'>
             <div className='w-[full] md:h-[150px] rounded-lg h-[200px] mb-5 outline-none overflow-hidden'>
                 <img className='w-full h-full rounded-lg' src={imgUrl} />
+            </div>
+            <div className='w-full h-[30px] text-center text-white mb-2 capitalize italic'>
+                <h3 className='font-thin'>{title}</h3>
             </div>
             <div className='flex justify-around'>
                 <a href={liveLink} target='blank'>
