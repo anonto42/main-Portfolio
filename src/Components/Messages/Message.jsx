@@ -1,7 +1,25 @@
+import axios from 'axios';
 import React from 'react'
 import { ImBin } from "react-icons/im";
+import { toast } from 'react-toastify';
 
 const Message = ( { email , name , work } ) => {
+
+    const Submit = async ( params ) => {
+
+        params.preventDefault();
+    
+        try { 
+    
+          const respons = await axios.post("/admin/deleteMessage" ,  { email : email } )
+    
+          toast.success(respons.data.message);
+    
+        } catch (error) {
+          console.log(error)
+        }
+      }
+
   return (
     <div className='w-full rounded-md min-h-[60px] bg-[#254c8962] mt-5'>
         {/* Information */}
@@ -19,9 +37,11 @@ const Message = ( { email , name , work } ) => {
         </div>
         {/* Delete message */}
         <div className='w-full h-[50px] border-t border-white mt-3 flex justify-center items-center'>
-            <div onClick={()=>console.log("Message was deleted")} className='text-white hover:text-red-700 text-xl cursor-pointer active:scale-105 duration-100'>
-                <ImBin />
-            </div>
+            <form action="POST">
+                <button onClick={Submit} className='text-white hover:text-red-700 text-xl cursor-pointer active:scale-105 duration-100'>
+                    <ImBin />
+                </button>
+            </form>
         </div>
     </div>
   )

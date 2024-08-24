@@ -3,6 +3,7 @@ import { IoLogOut } from "react-icons/io5";
 import Message from '../../Components/Messages/Message';
 import ProjectAdmin from '../../Components/ProjectCartForAdminPage/ProjectAdmin';
 import axios from 'axios';
+import UploadProject from '../../Components/Upload/UploadProject';
 
 const Admin = () => {
 
@@ -60,6 +61,10 @@ const Admin = () => {
             </div>
           </div>
         </div>
+        {/* Upload Photos */}
+        <div>
+          <UploadProject />
+        </div>
         {/* show project and add project and delete the project */}
         <div className='border-[#4285F4] border overflow-y-scroll my-3 w-full h-[320px] rounded-md mt-16'>
           {/* top name */}
@@ -70,7 +75,7 @@ const Admin = () => {
           <div className='w-full h-full flex justify-center '>
             <div className='w-[95%]'>
                {
-                projects.map( ( e, i ) => <ProjectAdmin key={i} titleOs={e.title} _id={e._id} index={ ( i + 1 ) } /> ) 
+                projects.map( ( e, i ) => <ProjectAdmin key={i} title={e.title} _id={e._id} index={ ( i + 1 ) } /> ) 
                }
             </div>
           </div>
