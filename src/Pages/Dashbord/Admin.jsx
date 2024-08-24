@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoLogOut } from "react-icons/io5";
 import Message from '../../Components/Messages/Message';
 import ProjectAdmin from '../../Components/ProjectCartForAdminPage/ProjectAdmin';
+import axios from 'axios';
 
 const Admin = () => {
 
@@ -13,6 +14,24 @@ const Admin = () => {
       window.location.href = '/login'
     }, 300);
   }
+
+  const [ projects , setProject ] = useState([]);
+  const [ messages , setMessage ] = useState([]);
+
+  useEffect(()=>{
+
+    axios.get("/admin/getMessages")
+    .then( data => setMessage(data.data) )
+    .catch( err => console.log(err) );
+
+    // get data of messages
+
+    axios.get("/admin/getProjecs")
+    .then( data => setProject(data.data) )
+    .catch( err => console.log(err) );
+
+  },[]);
+
 
   return (
     <div className='w-full bg-[#121223] pb-14'>
@@ -35,12 +54,14 @@ const Admin = () => {
           {/* Messages */}
           <div className='w-full h-full flex justify-center '>
             <div className='w-[95%]'>
-              <Message email={'anontom90.com'} name={"Sohidul islam anonto"} work={"I want to make a web site for my busness , I want to sell many more thinks in heat"} />
+               {
+                messages.map( ( e , i ) => <Message key={i} email={e.email} name={e.name} work={e.message} /> ) 
+               }
             </div>
           </div>
         </div>
         {/* show project and add project and delete the project */}
-        <div className='border-[#4285F4] border overflow-y-scroll my-3 w-full h-[320px] rounded-md'>
+        <div className='border-[#4285F4] border overflow-y-scroll my-3 w-full h-[320px] rounded-md mt-16'>
           {/* top name */}
           <div className='w-full border-[#4285F4] border-b-2 pb-3'>
             <h1 className='text-white text-sm xl:text-xl text-center mt-3'>Projects</h1>
@@ -48,7 +69,9 @@ const Admin = () => {
           {/* Messages */}
           <div className='w-full h-full flex justify-center '>
             <div className='w-[95%]'>
-              <ProjectAdmin title={"fapeHouse"} _id={"aldfasdf9asdfoasdfkla0s9dfu9"} index={ ( 0 + 1 ) }/>
+               {
+                projects.map( ( e, i ) => <ProjectAdmin key={i} titleOs={e.title} _id={e._id} index={ ( i + 1 ) } /> ) 
+               }
             </div>
           </div>
         </div>
