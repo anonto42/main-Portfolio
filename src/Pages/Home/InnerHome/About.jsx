@@ -35,7 +35,7 @@ const About = () => {
           <h3 className='text-[25px] gsap_animation font-semibold'>Hello, My Name Is</h3>
           <h1 className='text-[30px] gsap_animation font-bold'>Sohidul Islam Ananto</h1>
           <h2 className='text-[27px] gsap_animation gsap_animation font-bold text-[#80b4f4]'>I AM Web Developer</h2>
-          <p className='gsap_animation'>I’m a ( MERN ) stack Web developer. I make error-free and user friendly websites that will give your user a good experience. I love to write code's. </p>
+          <p className='gsap_animation'>I'm a MERN stack developer passionate about creating error-free, user-friendly websites that offer an excellent user experience. Coding is my craft, and I strive for perfection in every line. </p>
           <a href="/contact-me">
             <button id='' className='animation_up_down1 hover:bg-[#232323] bg-[#80b4f4] duration-300 ease-out hover:px-3 hover:text-white font-semibold text-[#1A1A33] px-1 py-2 w-[95px] rounded-xl text-[16px] shadow-md shadow-[#ffffff7b] my-[35px]'>Contact</button>
           </a>
