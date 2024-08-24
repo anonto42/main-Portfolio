@@ -7,6 +7,8 @@ import Project from './Pages/Projects/Project'
 import Login from './Pages/Login/Login'
 import PokeMe from './Pages/Poke/PokeMe';
 import Admin from './Pages/Dashbord/Admin';
+import 'react-toastify/dist/ReactToastify.css';
+import { ToastContainer } from 'react-toastify'
 
 function App() {
 
@@ -22,6 +24,8 @@ function App() {
           <Admin/>
         </RoutesForAdmin>} />
       </Routes>
+      {/* Toastyfy added */}
+      <ToastContainer />
     </BrowserRouter>
   )
 }
