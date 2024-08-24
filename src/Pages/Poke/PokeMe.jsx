@@ -1,9 +1,44 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Layout from './../Layout/Layout';
 import { FaLocationDot } from 'react-icons/fa6';
 import { MdEmail } from 'react-icons/md';
+import axios from 'axios';
+import { toast } from 'react-toastify';
 
 const PokeMe = () => {
+
+  const [ name , setName ] = useState();
+  const [ email , setEmail ] = useState();
+  const [ message , setMessage ] = useState();
+
+  const DATA = {
+    name,
+    email,
+    message
+  }
+
+  const Submit = async ( params ) => {
+
+    params.preventDefault();
+
+    try { 
+
+      const respons = await axios.post("/admin/messageSend" , DATA )
+      
+      console.log(respons.data)
+
+      setName('');
+      setEmail('');
+      setMessage('');
+
+      toast.success(respons.data.message);
+
+    } catch (error) {
+      console.log(error)
+    }
+  }
+
+
   return (
     <Layout>
       <div className='w-full h-auto text-white md:text-center'>
@@ -40,23 +75,22 @@ const PokeMe = () => {
         </div>
        </div>
        {/* from */}
-       <div>
+       <form action='POST' >
         <div className='w-full mb-4'>
           <h1 className='font-thin'>Your name</h1>
-          <input placeholder='Your Name' type="text" className='w-full md:w-[700px] outline-none h-[60px] border bg-[#141427] rounded-full px-4 mt-3 placeholder:font-serif'/>
+          <input placeholder='Your Name' value={name} onChange={ e => setName(e.target.value) } type="text" className='w-full md:w-[700px] outline-none h-[60px] border bg-[#141427] rounded-full px-4 mt-3 placeholder:font-serif'/>
         </div>
         <div className='w-full mb-4'>
           <h1 className='font-thin'>Your email</h1>
-          <input placeholder='Your Email' type="email" className='w-full md:w-[700px] outline-none h-[60px] border bg-[#141427] rounded-full px-4 mt-3 placeholder:font-serif'/>
+          <input placeholder='Your Email' value={email} onChange={ e => setEmail(e.target.value) } type="email" className='w-full md:w-[700px] outline-none h-[60px] border bg-[#141427] rounded-full px-4 mt-3 placeholder:font-serif'/>
         </div>
         <div className='w-full mb-4'>
           <h1 className='font-thin'>What do you want to do</h1>
-          <textarea rows={7} cols={40} placeholder='Write here...' type="text" className='w-full outline-none md:w-[700px] py-2 border bg-[#141427] rounded-xl px-4 mt-3 placeholder:font-serif'/>
+          <textarea rows={7} cols={40} placeholder='Write here...' value={message} onChange={ e => setMessage(e.target.value) } type="text" className='w-full outline-none md:w-[700px] py-2 border bg-[#141427] rounded-xl px-4 mt-3 placeholder:font-serif'/>
         </div>
-
-
-        <button className='bg-[#88B8F4] text-[#141427] font-bold px-5 py-4 rounded-xl text-md mb-4 active:scale-105 duration-150 ease-in-out'>Send Message</button>
-       </div>
+        <button onClick={Submit} className='bg-[#88B8F4] text-[#141427] font-bold px-5 py-4 rounded-xl text-md mb-4 active:scale-105 duration-150 ease-in-out'>Send Message</button>
+        {/* <input type='supmit' value={"Send Message"} className='bg-[#88B8F4] text-[#141427] font-bold px-5 py-4 rounded-xl text-md mb-4 active:scale-105 duration-150 ease-in-out' /> */}
+       </form>
       </div>
     </Layout>
   )
