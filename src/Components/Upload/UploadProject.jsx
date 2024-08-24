@@ -8,40 +8,54 @@ const UploadProject = () => {
     const [title , setTitle] = useState();
     const [liveLink , setLiveLink] = useState();
     const [sorceCode , setSorceCode] = useState();
-    
     const [selectedFile, setSelectedFile] = useState();
 
     
-    const uploadFrom = async ( props ) => {
-
-        const frontImage = new FormData();
-        frontImage.append('file', selectedFile);
+    
+    
+    
+    
+    const Submit = async ( params ) => {
         
-        // props.preventDefault();
+        params.preventDefault();
         
-        const data = {
-            title,
-            liveLink,
-            sorceCode,
-            frontImage
-        };
-
         try {
+
+            const frontImage = new FormData();
+            frontImage.append('frontImage', selectedFile);
             
-            await axios.post("/admin/uploadImage" , data );
+            console.log(selectedFile)
+            console.log(frontImage)
 
-            toast.success('Project Uploaded Successfully');
+            const DATA = {
+                    title : title,
+                    liveLink : liveLink,
+                    sorceCode : sorceCode,
+                    frontImage : frontImage
+                }
 
-            setSelectedFile("");
-            setTitle('');
-            setLiveLink('');
-            setSorceCode('');
+                // Define the configuration for the request
+                const config = {
+                    headers: {
+                        'Content-Type': 'multipart/form-data'
+                    }
+                };
+            
+            const respons = await axios.post("/admin/messageSend" , DATA , config)
+            
+            console.log(respons.data)
+
+            setName('');
+            setEmail('');
+            setMessage('');
+
+            toast.success(respons.data.message);
 
         } catch (error) {
-            toast.error("Your project upload failed")
-            console.log(error);
+            console.log(error)
         }
     }
+
 
   return (
     <div className='w-full h-[440px] rounded-md mt-16 border overflow-hidden border-[#4285F4]'>
@@ -57,11 +71,14 @@ const UploadProject = () => {
                 <input className='w-[95%] h-full rounded-md px-4 placeholder:text-[#a9c1e8] outline-none text-white bg-[#232738]' value={sorceCode} onChange={ e => setSorceCode(e.target.value) } type="text" name="sorceCode" placeholder='Sorce Code' />
             </div>
             <div className='flex justify-center w-full h-[40px] mt-12'>
-                <input className='w-[130px] h-full rounded-md px-4 placeholder:text-[#a9c1e8]' name='frontImage' type="file" onChange={ (e) => setSelectedFile(e.target.files[0] ) } />
-                {/* <IoIosDoneAll className={ !selectedFile ? 'text-[30px] text-transparent' : "text-green-700 text-[30px]"} /> */}
+                <label htmlFor="file">
+                    <div className='w-[120px] h-full bg-red-800 rounded-2xl text-white flex justify-center items-center text-sm cursor-pointer'>Select Image</div>
+                </label>
+                <input id='file' className='bg-slate-300 hidden rounded-md px-4 placeholder:text-[#a9c1e8]' type="file" name='frontImage' onChange={ e => setSelectedFile( e.target.files[0] ) } />
+                <IoIosDoneAll className={ !selectedFile ? 'text-[30px] text-transparent mt-1' : "text-green-700 text-[30px] mt-1"} />
             </div>
             <div className='w-full h-full flex justify-center mt-10'>
-                <button onClick={uploadFrom} className='h-[40px] w-[120px] bg-green-600 text-white rounded-md font-bold active:scale-105 duration-150'>Upload</button>
+                <button onClick={Submit} className='h-[40px] w-[120px] bg-green-600 text-white rounded-md font-bold active:scale-105 duration-150'>Upload</button>
             </div>
         </form>
     </div>
