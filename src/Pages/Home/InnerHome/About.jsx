@@ -1,9 +1,11 @@
 import { useGSAP } from '@gsap/react'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import gsap from 'gsap'
 import { BsEmojiSunglassesFill } from 'react-icons/bs'
+import axios from 'axios'
 
 const About = () => {
+  
   useGSAP(()=>{
     gsap.from('.gsap_animation',{
       y:20,
@@ -12,6 +14,17 @@ const About = () => {
       opacity:0
     });
   })
+
+  const [projectsLenth , setProjects] = useState([]);
+
+  useEffect(()=>{
+
+    axios.get('/admin/getProjecs')
+    .then( e => setProjects(e.data.length) )
+    .catch( e => console.log(e) )
+
+  },[]);
+
   return (
     <div className='h-auto w-full'>
       <div className='w-full h-[380px] md:hidden border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
@@ -35,11 +48,11 @@ const About = () => {
             </div>
           </div>
           <div id='' className='animation_up_down animation_up_down01 flex justify-center items-center w-[95%] h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:-ml-[40px] md:px-8 md:bg-[#18182E] md:-mt-12 relative'>
-            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'1.5'}+</h1>
+            <h1 className='flex justify-center font-bold md:text-[17px] mt-[5px]'>{'1.5'}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Years of Experience</p>
           </div>
           <div id='' className='animation_up_down animation_up_down2 flex justify-center items-center w-[95%] mt-3 h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:ml-[105px] md:px-8 md:bg-[#18182E] md:mt-16 relative'>
-            <h1 className='mr-1 font-bold md:text-[17px] mt-[5px]'>{'10'}+</h1>
+            <h1 className='flex justify-center font-bold md:text-[17px] mt-[5px]'>{projectsLenth}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Completed Projects</p>
           </div>
         </div>
