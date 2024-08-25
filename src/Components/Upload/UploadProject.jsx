@@ -1,6 +1,7 @@
 import axios from 'axios';
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { IoIosDoneAll } from "react-icons/io";
+import { ClipLoader, DotLoader } from 'react-spinners';
 import { toast } from 'react-toastify';
 
 const UploadProject = () => {
@@ -10,29 +11,29 @@ const UploadProject = () => {
     const [sorceCode , setSorceCode] = useState();
     const [selectedFile, setSelectedFile] = useState();
 
-    
-    
-    
+    const [loader,setLoader] = useState(false);
+
+    const override = {
+        display: "block",
+        margin: "0 auto",
+        borderColor: "red",
+        color:"#80b4f4"
+      };
     
     
     const Submit = async ( params ) => {
+
+        setLoader(true);
         
         params.preventDefault();
         
         try {
 
-            const frontImage = new FormData();
-            frontImage.append('frontImage', selectedFile);
-            
-            console.log(selectedFile)
-            console.log(frontImage)
-
-            const DATA = {
-                    title : title,
-                    liveLink : liveLink,
-                    sorceCode : sorceCode,
-                    frontImage : frontImage
-                }
+            const formData = new FormData();
+            formData.append('frontImage', selectedFile);
+            formData.append('title', title);
+            formData.append('liveLink', liveLink);
+            formData.append('sorceCode', sorceCode);
 
                 // Define the configuration for the request
                 const config = {
@@ -41,24 +42,31 @@ const UploadProject = () => {
                     }
                 };
             
-            const respons = await axios.post("/admin/messageSend" , DATA , config)
+            const respons = await axios.post("/admin/uploadImage" , formData , config );
             
-            console.log(respons.data)
-
-            setName('');
-            setEmail('');
-            setMessage('');
+            setSelectedFile(null);
+            setSorceCode("");
+            setLiveLink("");
+            setTitle("");
+            
+            setLoader(false);
 
             toast.success(respons.data.message);
 
         } catch (error) {
+            setLoader(false);
             console.log(error)
         }
     }
 
 
   return (
-    <div className='w-full h-[440px] rounded-md mt-16 border overflow-hidden border-[#4285F4]'>
+    <div className='w-full h-[440px] rounded-md mt-16 border overflow-hidden border-[#4285F4] relative'>
+        
+            {
+                loader ? <div className='absolute w-full h-full flex justify-center items-center'> <DotLoader color={override.color} loading={loader} cssOverride={override} size={100} aria-label="Loading Spinner" data-testid="loader" /> </div>: null
+            }
+
         <h1 className='text-white text-center py-3 capitalize underline text-[20px] xl:text-2xl mb-10'>Upload your Project</h1>
         <form action="POST">
             <div className='flex justify-center w-full h-[40px] mb-4'>
