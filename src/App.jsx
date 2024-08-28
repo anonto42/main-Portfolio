@@ -9,6 +9,7 @@ import PokeMe from './Pages/Poke/PokeMe';
 import Admin from './Pages/Dashbord/Admin';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
+import NoPage from './Pages/notFoundPage/NoPage'
 
 function App() {
 
@@ -20,6 +21,7 @@ function App() {
         <Route path='/aboute/my-project' element={<Project/>} />
         <Route path='/login' element={<Login/>} />
         <Route path='/contact-me' element={<PokeMe/>} />
+        <Route path='/*' element={<NoPage/>} />
         <Route path='/login/admin' element={<RoutesForAdmin>
           <Admin/>
         </RoutesForAdmin>} />
