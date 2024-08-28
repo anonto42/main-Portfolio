@@ -21,8 +21,6 @@ const Project = () => {
     .catch( data => console.log(data));
   },[]);
 
-  console.log(ProjectsData)
-
   return (
     <Layout>
       <div className='min-h-[100svh] w-full'>
