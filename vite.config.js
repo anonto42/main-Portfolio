@@ -7,7 +7,7 @@ export default defineConfig({
   server:{
     proxy:{
       '/admin':{
-        target:'http://localhost:3000/api',
+        target:'https://backend-three-khaki-96.vercel.app/api/',
         changeOrigin:true,
         rewrite:path=>path.replace(/^\/admin/, '/admin')
       }
