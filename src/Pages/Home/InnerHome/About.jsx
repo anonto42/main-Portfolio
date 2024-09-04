@@ -25,6 +25,8 @@ const About = () => {
 
   },[]);
 
+  console.log(projectsLenth)
+
   return (
     <div className='h-auto w-full'>
       <div className='w-full h-[380px] md:hidden border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
