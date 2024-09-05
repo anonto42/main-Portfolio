@@ -8,7 +8,7 @@ export default defineConfig({
       '/admin':{
         target:'https://backend-three-khaki-96.vercel.app/api',
         changeOrigin:true,
-        rewrite:path=>path.replace(/^\/admin/, '/api/admin')
+        rewrite:path=>path.replace(/^\/admin/, '')
       }
     }
   }
