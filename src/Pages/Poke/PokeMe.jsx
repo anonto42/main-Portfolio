@@ -23,7 +23,7 @@ const PokeMe = () => {
 
     try { 
 
-      const respons = await axios.post("/admin/messageSend" , DATA )
+      const respons = await axios.post("https://backend-three-khaki-96.vercel.app/api/admin/messageSend" , DATA )
       
       console.log(respons.data)
 
