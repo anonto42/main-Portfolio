@@ -21,13 +21,13 @@ const Admin = () => {
 
   useEffect(()=>{
 
-    axios.get("/admin/getMessages")
+    axios.get("https://backend-three-khaki-96.vercel.app/api/admin/getMessages")
     .then( data => setMessage(data.data) )
     .catch( err => console.log(err) );
 
     // get data of messages
 
-    axios.get("/admin/getProjecs")
+    axios.get("https://backend-three-khaki-96.vercel.app/api/admin/getProjecs")
     .then( data => setProject(data.data) )
     .catch( err => console.log(err) );
 
