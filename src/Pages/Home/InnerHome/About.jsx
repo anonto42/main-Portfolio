@@ -19,7 +19,7 @@ const About = () => {
 
   useEffect(()=>{
 
-    axios.get('/admin/getProjecs')
+    axios.get('https://backend-three-khaki-96.vercel.app/api/admin/getProjecs')
     .then( e => setProjects(e.data.length) )
     .catch( e => console.log(e) )
 
