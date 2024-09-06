@@ -5,6 +5,8 @@ import { useGSAP } from '@gsap/react'
 import gsap from 'gsap'
 import { PiStudentDuotone } from 'react-icons/pi';
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { SlUser } from "react-icons/sl";
+import { AiTwotoneMail } from "react-icons/ai";
 
 const Contact =()=>{
     gsap.registerPlugin(ScrollTrigger)
@@ -86,13 +88,13 @@ const Contact =()=>{
         <div className='w-full flex justify-center mt-12 mb-[50px] text-center'>
             <div className="contact-box">
                 <h1 className='text-[30px] md:text-[40px] font-bold'>Contact​</h1>
-                <h4 className='text-[15px] md:text-[20px] font-semibold italic text-[#88B8F4] md:-mt-2'>Are You Looking For Your Business Online Presence? I am here. 🙂</h4>
+                <h4 className='text-[15px] md:text-[20px] font-semibold italic text-[#88B8F4] md:-mt-2'>Are You Looking For Your Business Online Presence? I am here.</h4>
             </div>
         </div>
         <div className='md:flex justify-between lg:px-6 xl:px-20'>
             <div className='bg-[#1C222A] md:hidden mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto box-of-animation'>
-                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
-                    <FaUserTie />
+                <div className='text-[47px] flex justify-center md:text-[45px] text-[#88B8F4]'>
+                    < SlUser  />
                 </div>
                 <div className='text-center'>
                     <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>Sohidul Islam Ananto</h1>
@@ -109,8 +111,8 @@ const Contact =()=>{
                 </div>
             </div>
             <div className='bg-[#1C222A] md:hidden box-of-animation3 mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto'>
-                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
-                    <MdMarkEmailRead />
+                <div className='text-[55px] flex justify-center md:text-[45px] text-[#88B8F4]'>
+                    <AiTwotoneMail />
                 </div>
                 <div className='text-center'>
                     <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>email</h1>
@@ -119,8 +121,8 @@ const Contact =()=>{
             </div>
             {/* md deivces */}
             <div className='bg-[#1C222A] hidden md:block mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto md_box'>
-                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
-                    <FaUserTie />
+                <div className='text-[60px] flex justify-center md:text-[38px] text-[#88B8F4]'>
+                    < SlUser  />
                 </div>
                 <div className='text-center'>
                     <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>Sohidul Islam Ananto</h1>
@@ -137,8 +139,8 @@ const Contact =()=>{
                 </div>
             </div>
             <div className='bg-[#1C222A] hidden md:block mb-[50px] w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 md:h-auto md_box3'>
-                <div className='text-[60px] flex justify-center md:text-[45px] text-[#88B8F4]'>
-                    <MdMarkEmailRead />
+                <div className='text-[60px] flex justify-center md:text-[40px] text-[#88B8F4]'>
+                    <AiTwotoneMail />
                 </div>
                 <div className='text-center'>
                     <h1 className='uppercase my-2 text-[18px] md:text-[18px] font-bold'>email</h1>
