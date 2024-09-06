@@ -3,7 +3,7 @@ import { FaFacebookSquare, FaGithub, FaLinkedin } from 'react-icons/fa'
 
 const Footer = () => {
   return (
-    <div className='w-ful h-[100px] text-center bg-[#1c222a00] md:flex justify-around items-center'>
+    <div className='w-ful h-[150px] text-center bg-[#1c222a00] md:flex justify-around items-center'>
       <div className='flex justify-center pt-5'>
         <div className='round'>
           <a target='blnk' href="https://www.linkedin.com/in/sohidul-islam-ananto/">
