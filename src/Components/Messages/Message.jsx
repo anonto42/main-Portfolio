@@ -11,7 +11,7 @@ const Message = ( { email , name , work } ) => {
     
         try { 
     
-          const respons = await axios.post("/admin/deleteMessage" ,  { email : email } )
+          const respons = await axios.post("https://backend-three-khaki-96.vercel.app/api/admin/deleteMessage" ,  { email : email } )
     
           toast.success(respons.data.message);
     

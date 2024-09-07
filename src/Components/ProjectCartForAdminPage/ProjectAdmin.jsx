@@ -12,7 +12,7 @@ const ProjectAdmin = ({title,_id,index}) => {
 
     try { 
 
-      const respons = await axios.post("/admin/deleteProject" ,  { title : title } )
+      const respons = await axios.post("https://backend-three-khaki-96.vercel.app/api/admin/deleteProject" ,  { title : title } )
 
       toast.success(respons.data.message , "Now refresh your page");
 
