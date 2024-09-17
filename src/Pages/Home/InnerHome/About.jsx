@@ -25,7 +25,16 @@ const About = () => {
 
   },[]);
 
-  console.log(projectsLenth)
+
+const currentDate = new Date();
+
+const june2022 = new Date(2023, 1, 1);
+
+const differenceInMs = currentDate - june2022;
+
+const differenceInYears = differenceInMs / (1000 * 60 * 60 * 24 * 365.25);
+
+const differenceInYearsRounded = differenceInYears.toFixed(1);
 
   return (
     <div className='h-auto w-full'>
@@ -50,7 +59,7 @@ const About = () => {
             </div>
           </div>
           <div id='' className='animation_up_down animation_up_down01 flex justify-center items-center w-[95%] h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:-ml-[40px] md:px-8 md:bg-[#18182E] md:-mt-12 relative'>
-            <h1 className='flex justify-center font-bold md:text-[17px] mt-[10px]'>{'1.6'}+</h1>
+            <h1 className='flex justify-center font-bold md:text-[17px] mt-[10px]'>{differenceInYearsRounded}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Years of Experience</p>
           </div>
           <div id='' className='animation_up_down animation_up_down2 flex justify-center items-center w-[95%] mt-3 h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:ml-[105px] md:px-8 md:bg-[#18182E] md:mt-16 relative'>
