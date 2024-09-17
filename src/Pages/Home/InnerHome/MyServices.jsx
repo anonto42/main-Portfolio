@@ -2,7 +2,7 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import React from 'react';
 import { DiIllustrator, DiLinux } from 'react-icons/di';
-import { FaHandPointRight, FaLaptopCode } from "react-icons/fa";
+import { FaHandPointRight, FaLaptopCode, FaWordpress } from "react-icons/fa";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const MyServices = () => {
@@ -95,7 +95,7 @@ const MyServices = () => {
             </div>
         </div>
         <div className='md:flex justify-between lg:px-6 xl:px-20'>
-            <div className='bg-[#1C222A] mb-[50px] md:hidden amination-services w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 h-[340px] md:h-auto relative'>
+            <div className='bg-[#1C222A] mb-[50px] md:hidden amination-services w-full lg:w-[320px] md:w-[280px] rounded-2xl shadow-xl py-9 px-9 min-h-[340px] md:h-auto relative'>
                 <div className='text-[80px] md:text-[60px] text-[#88B8F4]'>
                     <FaLaptopCode/>
                 </div>
@@ -112,11 +112,11 @@ const MyServices = () => {
             </div>
             <div className='bg-[#1C222A] md:hidden amination-services2 mb-[50px] w-full lg:w-[320px] md:w-[280px] md:mx-1 rounded-2xl shadow-xl py-9 px-9 h-[340px] md:h-auto relative'>
                 <div className='text-[80px] md:text-[60px] text-[#88B8F4]'>
-                    <DiIllustrator />
+                    <FaWordpress />
                 </div>
                 <div>
-                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>vector design</h1>
-                    <p className='text-sm italic md:text-[12px]'>Proficient in vector design, creating with Adobe Illustrator.</p>
+                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>Wordpress</h1>
+                    <p className='text-sm italic md:text-[12px]'>Wordpress custom theme and plugins.</p>
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105 bottom-9 absolute'>
@@ -161,11 +161,11 @@ const MyServices = () => {
             </div>
             <div className='md_animation2 bg-[#1C222A] md:block mb-[50px] w-full lg:w-[320px] md:w-[280px] md:mx-1 rounded-2xl shadow-xl py-9 px-9 h-[340px] md:h-auto relative hidden'>
                 <div className='text-[80px] md:text-[60px] text-[#88B8F4]'>
-                    <DiIllustrator />
+                    <FaWordpress />
                 </div>
                 <div>
-                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>vector design</h1>
-                    <p className='text-sm italic md:text-[12px]'>Proficient in vector design, creating with Adobe Illustrator.</p>
+                    <h1 className='uppercase my-2 text-[20px] md:text-[18px] font-bold'>Wordpress</h1>
+                    <p className='text-sm italic md:text-[12px]'>Wordpress custom theme and plugins.</p>
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105 bottom-9 absolute'>
