@@ -37,7 +37,7 @@ const differenceInYears = differenceInMs / (1000 * 60 * 60 * 24 * 365.25);
 const differenceInYearsRounded = differenceInYears.toFixed(1);
 
   return (
-    <div className='h-auto w-full'>
+    <div className='h-auto w-full mt-7 md:mt-16'>
       <div className='w-[290px] h-[290px] sm:h-[350px] sm:w-[350px] md:hidden mx-auto border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
         <img src="/Profile.png" className='sm:w-[500px] contrast-[1.25]' alt="" /> 
       </div>
