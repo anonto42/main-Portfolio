@@ -21,7 +21,7 @@ const Naveber = () => {
             </a>
         </div>
         <div className=''>
-            <div className={nav == true ? 'bg-[#80b4f4] nav-container shadow-md shadow-[#ffffff7b] w-[350px] sm:w-[530px] md:hidden h-[200px] rounded-md fixed left-3 z-50 duration-200 ease-out top-2' : 'bg-[#80b4f4] nav-container shadow-md shadow-[#ffffff7b] w-[350px] sm:w-[530px] md:hidden h-[200px] rounded-md absolute left-3 z-50 duration-200 ease-out -top-[220px]'}>
+            <div className={nav == true ? 'bg-[#80b4f4] nav-container shadow-md shadow-[#ffffff7b] w-[350px] sm:w-[530px] md:hidden h-[200px] rounded-md fixed left-3 z-50 duration-200 ease-linear top-2' : 'bg-[#80b4f4] nav-container shadow-md shadow-[#ffffff7b] w-[350px] sm:w-[530px] md:hidden h-[200px] rounded-md absolute right-1 z-50 duration-200 ease-linear -top-[220px]'}>
                 <a href="/">
                     <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Home</h3>
                 </a>
