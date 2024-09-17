@@ -29,8 +29,8 @@ const About = () => {
 
   return (
     <div className='h-auto w-full'>
-      <div className='w-full h-[380px] md:hidden border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
-        <img src="/Profile.png" className='sm:w-[80%] contrast-[1.25]' alt="" /> 
+      <div className='w-[290px] h-[290px] sm:h-[350px] sm:w-[350px] md:hidden mx-auto border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden'>
+        <img src="/Profile.png" className='sm:w-[500px] contrast-[1.25]' alt="" /> 
       </div>
       <div className='text-white mt-3 md:flex justify-between'>
         <div className='mb-3 md:w-[350px] lg:min-w-[400px] md:max-w-[600px] md:mt-[110px]'>
