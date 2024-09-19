@@ -35,14 +35,14 @@ const UploadProject = () => {
             formData.append('liveLink', liveLink);
             formData.append('sorceCode', sorceCode);
 
-                // Define the configuration for the request
+                // Define the configuration for the request 'https://backend-three-khaki-96.vercel.app/api/admin/getProjecs'
                 const config = {
                     headers: {
                         'Content-Type': 'multipart/form-data'
                     }
                 };
             
-            const respons = await axios.post("/admin/uploadImage" , formData , config );
+            const respons = await axios.post("https://backend-three-khaki-96.vercel.app/api/admin/uploadImage" , formData , config );
             
             setSelectedFile(null);
             setSorceCode("");
@@ -55,7 +55,8 @@ const UploadProject = () => {
 
         } catch (error) {
             setLoader(false);
-            console.log(error)
+            toast.error("Your project was not uploaded");
+            console.log(error);
         }
     }
 
