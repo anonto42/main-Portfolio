@@ -9,7 +9,7 @@ const Project = () => {
   const [ProjectsData, setData] = useState([]);
 
   useEffect(()=>{
-    axios.get("https://backend-three-khaki-96.vercel.app/api/admin/getProjecs")
+    axios.get("https://main-porthfolio-backend.vercel.app/api/admin/getProjecs")
     .then(response => {
       const result = response.data;
       if (Array.isArray(result)) {
