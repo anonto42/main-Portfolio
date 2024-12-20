@@ -105,8 +105,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
@@ -120,8 +120,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105 bottom-9 absolute'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
@@ -137,8 +137,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] bottom-9 absolute md:h-[40px] border-[#88B8F4] hover:scale-105'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
@@ -154,8 +154,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
@@ -169,8 +169,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] md:h-[40px] border-[#88B8F4] hover:scale-105 bottom-9 absolute'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
@@ -186,8 +186,8 @@ const MyServices = () => {
                 </div>
                 <a href="/">
                     <div className='flex items-center border-2 w-[160px] justify-center h-[50px] rounded-xl mt-12 md:mt-5 md:w-[140px] bottom-9 absolute md:h-[40px] border-[#88B8F4] hover:scale-105'>
-                        <h5 className='text-[18px] md:text-[15px] font-bold'>Poke Me</h5>
-                        <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' />
+                        <h5 className='text-[18px] md:text-[15px] font-bold'>Contact me</h5>
+                        {/* <FaHandPointRight className='text-[#88B8F4] text-[25px] md:text-[20px] ml-3' /> */}
                     </div>
                 </a>
             </div>
