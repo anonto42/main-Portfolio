@@ -2,6 +2,7 @@ import React, { Suspense, useEffect, useState } from 'react'
 import MyServices from './InnerHome/MyServices'
 import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
+const Form = React.lazy(()=>import( '../../Components/Contact/Form'))
 const AboutMeForHome = React.lazy(()=> import( '../Aboutme/AboutMeForHome'))
 const Contact = React.lazy(()=> import('./InnerHome/Contact' ))
 const About = React.lazy(()=> import('./InnerHome/About' ))
@@ -28,6 +29,7 @@ const Home = () => {
         <ProjectForHomePage />
         <AboutMeForHome />
         <Contact />
+        <Form />
       </Suspense>
     </Layout>
   )
