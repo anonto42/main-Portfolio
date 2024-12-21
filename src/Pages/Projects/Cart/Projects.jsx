@@ -2,6 +2,8 @@ import { useGSAP } from '@gsap/react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import React from 'react';
+import { FaGithub } from "react-icons/fa";
+import { FaLink } from "react-icons/fa6";
 
 const Projects = ({imgUrl,liveLink,repoLink,title}) => {
     
@@ -19,13 +21,13 @@ const Projects = ({imgUrl,liveLink,repoLink,title}) => {
             </div>
             <div className='flex justify-around'>
                 <a href={liveLink} target='_blank'>
-                    <div className='w-[100px] md:w-[80px] md:h-[30px] md:text-[#515151] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center md:text-[14px] shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
-                        Live link
+                    <div className='w-[100px] md:w-[80px] md:h-[30px] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center md:text-[14px] shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
+                        <FaLink className='text-[22px] text-[#1C222Av]' title='Live link' />
                     </div>
                 </a>
                 <a href={repoLink} target='_blank'>
-                    <div className='w-[100px] md:text-[14px] md:w-[80px] md:h-[30px] md:text-[#515151] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
-                        Code link
+                    <div className='w-[100px] md:text-[14px] md:w-[80px] md:h-[30px] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
+                        <FaGithub className='text-xl text-[#1C222Av]' title='Source code' />
                     </div> 
                 </a>
             </div>
