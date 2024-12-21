@@ -4,7 +4,7 @@ import gsap from 'gsap'
 import { BsEmojiSunglassesFill } from 'react-icons/bs'
 import axios from 'axios'
 
-const About = () => {
+const About = ({projectsLenth}) => {
 
   useGSAP(()=>{
     gsap.from('.gsap_animation',{
@@ -14,16 +14,6 @@ const About = () => {
       opacity:0
     });
   })
-
-  const [projectsLenth , setProjects] = useState([]);
-
-  useEffect(()=>{
-
-    axios.get('https://main-porthfolio-backend.vercel.app/api/admin/getProjecs')
-    .then( e => setProjects(e.data.length) )
-    .catch( e => console.log(e) )
-
-  },[]);
 
 
 const currentDate = new Date();
