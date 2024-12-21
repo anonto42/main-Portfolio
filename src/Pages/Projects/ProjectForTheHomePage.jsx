@@ -1,8 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { Suspense, useEffect, useState } from 'react'
 import Layout from './../Layout/Layout';
 import Projects from './Cart/Projects';
 import axios from 'axios';
 import { data } from 'autoprefixer';
+import Loader from '../../Components/Loader/Loader';
 
 const ProjectForTheHomePage = () => {
 
@@ -28,9 +29,14 @@ const ProjectForTheHomePage = () => {
           <div className=''>Projects</div>
         </div>
         <div className='w-full h-auto flex justify-center flex-wrap'>
-          {
-            ProjectsData.map( (e,i) => <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />)
-          }
+          <Suspense fallback={<Loader/>} >
+            {
+              ProjectsData.map( (e,i) => <Suspense fallback={<Loader/>}>
+                <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />
+              </Suspense> 
+              )
+            }
+          </Suspense>
         </div>
       </div>
     </div>

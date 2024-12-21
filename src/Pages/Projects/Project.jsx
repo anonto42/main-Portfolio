@@ -31,7 +31,10 @@ const Project = () => {
         <div className='w-full h-auto flex justify-center flex-wrap'>
           <Suspense fallback={<Loader/>} >
             {
-              ProjectsData.map( (e,i) =><Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />)
+              ProjectsData.map( (e,i) =><Suspense fallback={<Loader/>}>
+                <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />
+              </Suspense>
+              )
             }
           </Suspense>
         </div>
