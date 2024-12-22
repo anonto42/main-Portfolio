@@ -22,7 +22,7 @@ const ProjectForTheHomePage = () => {
 
   return (
     <div>
-      <div className='min-h-[100svh] w-full'>
+      <div className='h-auto w-full'>
         <div className='flex justify-center items-center my-8 mb-16 md:mb-[80px] underline text-[#88B8F4] md:my-5 text-[30px] font-semibold'>
           <div className=''>Projects</div>
         </div>
