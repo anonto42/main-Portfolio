@@ -26,8 +26,8 @@ const Home = () => {
       <Suspense fallback={<Loader />} >
         <About projectsLenth={projectsLenth}/>
         <MyServices/>
-        <ProjectForHomePage />
         <AboutMeForHome />
+        <ProjectForHomePage />
         <Contact />
         <Form />
       </Suspense>
