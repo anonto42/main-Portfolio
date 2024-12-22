@@ -1,22 +1,6 @@
-import { useGSAP } from '@gsap/react';
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-import gsap from 'gsap'
 import React from 'react';
 
 const AboutMeForHome = () => {
-  gsap.registerPlugin(ScrollTrigger)
-    useGSAP(()=>{
-        gsap.from('.text-animation-in',{
-            y:20,
-            opacity:0,
-            duration:2,
-            scrollTrigger:{
-                trigger:'.box-of-animation',
-                start:"top -3%",
-                scroller:"body"
-            }
-        });
-    })
   return (
         <div className='w-full h-auto text-white py-10'>
             <h1 className='text-animation-in text-[25px] text-center underline text-[#80b4f4] font-bold md:text-[30px] my-5'>ABOUT ME</h1>
