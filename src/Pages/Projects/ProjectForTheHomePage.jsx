@@ -1,8 +1,6 @@
 import React, { Suspense, useEffect, useState } from 'react'
-import Layout from './../Layout/Layout';
 import Projects from './Cart/Projects';
 import axios from 'axios';
-import { data } from 'autoprefixer';
 import Loader from '../../Components/Loader/Loader';
 
 const ProjectForTheHomePage = () => {
