@@ -1,21 +1,22 @@
 import React, { useState } from 'react';
 import { FaHome } from "react-icons/fa";
+import { toast } from 'react-toastify';
 
 const Login = () => {
   const [email,setEmail] = useState('');
-  const [pass,setPass] = useState('');
-  const loginFun = () =>{
-    if (email == "anonto1080") {
-      localStorage.setItem("sohidul-islam-ananto",JSON.stringify(true));
-      window.location.href = '/login/admin';
-    }else{
-      // alert("Wrong Email or Password");
-      console.log('some thing wrong');
-    };
+  const loginFun = async () =>{
+    try {
+
+      toast.loading('Please wait...',{position:'top-center',autoClose:2000});
+
+      toast.success('Login Successfully! Redirecting to the admin panel...',{position:'top-center',autoClose:2000});
+    } catch (error) {
+      console.log(error.message)
+    }
   };
   return (
     <div className='w-full h-screen bg-[#121223] justify-center items-center flex'>
-      <div className='w-[380px] h-[600px] bg-gray-500 rounded-2xl shadow-castom relative'>
+      <div className='w-[380px] h-[300px] bg-gray-500 rounded-2xl shadow-castom relative'>
         {/* Home btn */}
         <div onClick={()=>{
           const homCon = confirm('Are you want to redirect to the home page?');
@@ -32,11 +33,10 @@ const Login = () => {
         </div>
         <div className='w-full h-[70%]'>
           <div className='px-3'>
-            <input value={email} onChange={e=>setEmail(e.target.value)} className='w-full rounded-full shadow-md shadow-black my-5 h-[50px] px-3 outline-none' type='email' placeholder='Inter Admin Email'></input>
-            <input value={pass} onChange={e=>setPass(e.target.value)} className='w-full shadow-md shadow-black rounded-full my-5 h-[50px] px-3 outline-none' type='password' placeholder='password'></input>
+            <input value={email} onChange={e=>setEmail(e.target.value)} className='w-full rounded-full shadow-md shadow-black my-5 h-[50px] px-6 outline-none' type='text' placeholder='Inter the secret token'/>
           </div>
           <div className='flex justify-center items-center px-24'>
-            <button onClick={()=>loginFun()} className='w-full h-[40px] bg-[#37d837] text-[16px] font-bold text-white mt-28 rounded-xl active:scale-105 duration-200 easy-in active:bg-[#ff2f2f] shadow-md shadow-black'>Login</button>
+            <button onClick={()=>loginFun()} className='w-full h-[40px] bg-[#37d837] text-[16px] font-bold text-white mt-10 rounded-xl active:scale-105 duration-200 easy-in active:bg-[#ff2f2f] shadow-md shadow-black'>Login</button>
           </div>
         </div>
       </div>
