@@ -44,7 +44,7 @@ const differenceInYearsRounded = differenceInYears.toFixed(1);
         <div>
           <div className='image hidden md:block'>
             <div className='w-[500px] h-[500px] rounded-full border-[3px] border-[#80b4f4] flex justify-center overflow-hidden relative bg-[#99afd886]'>
-              <img src="/Profile.png" className=' contrast-[1.25] -saturate-[1.2]' alt="" />
+              <img src="/Profile.png" className='mr-8 contrast-[1.25] -saturate-[1]' alt="" />
               <BsEmojiSunglassesFill className=' hidden absolute top-[290px] left-[140px] border-2 shadow-md border-[#80b4f4] text-[#80b4f4] text-[40px] bg-white rounded-full' />
             </div>
           </div>
