@@ -20,14 +20,14 @@ const Projects = ({imgUrl,liveLink,repoLink,title}) => {
                 <h3 className=' font-normal'>{title}</h3>
             </div>
             <div className='flex justify-around'>
-                <a href={liveLink} target='_blank'>
+                <a href={liveLink} target='_blank' title='Live link'>
                     <div className='w-[100px] md:w-[80px] md:h-[30px] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center md:text-[14px] shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
-                        <FaLink className='text-[22px] text-[#1C222Av]' title='Live link' />
+                        <FaLink className='text-[22px] text-[#1C222Av]' />
                     </div>
                 </a>
-                <a href={repoLink} target='_blank'>
+                <a href={repoLink} target='_blank' title='Source code'>
                     <div className='w-[100px] md:text-[14px] md:w-[80px] md:h-[30px] h-[40px] bg-[#88B8F4] rounded-lg flex justify-center items-center shadow-md hover:shadow-[#5b79bf] shadow-[#312f453f] active:scale-110 cursor-pointer duration-150 ease-linear font-semibold'>
-                        <FaGithub className='text-xl text-[#1C222Av]' title='Source code' />
+                        <FaGithub className='text-xl text-[#1C222Av]' />
                     </div> 
                 </a>
             </div>
