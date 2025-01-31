@@ -10,8 +10,11 @@ import Admin from './Pages/Dashbord/Admin';
 import 'react-toastify/dist/ReactToastify.css';
 import { ToastContainer } from 'react-toastify'
 import NoPage from './Pages/notFoundPage/NoPage'
+import libDataFetch from './lib/fetchData'
 
 function App() {
+  
+  libDataFetch()
 
   return (
     <BrowserRouter>
