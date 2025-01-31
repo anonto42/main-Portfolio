@@ -1,7 +1,7 @@
-import React, { Suspense, useEffect, useState } from 'react'
+import React, { Suspense } from 'react'
 import MyServices from './InnerHome/MyServices'
-import axios from 'axios'
 import Loader from '../../Components/Loader/Loader'
+import { useSelector } from 'react-redux'
 const Form = React.lazy(()=>import( '../../Components/Contact/Form'))
 const AboutMeForHome = React.lazy(()=> import( '../Aboutme/AboutMeForHome'))
 const Contact = React.lazy(()=> import('./InnerHome/Contact' ))
@@ -11,20 +11,13 @@ const ProjectForHomePage = React.lazy(()=> import('./../Projects/ProjectForTheHo
 
 const Home = () => {
 
-  const [projectsLenth , setProjects] = useState([]);
 
-  useEffect(()=>{
-
-    axios.get('https://main-porthfolio-backend.vercel.app/api/admin/getProjecs')
-    .then( e => setProjects(e.data.length) )
-    .catch( e => console.log(e) )
-
-  },[]);
+  const { projects } = useSelector( data => data.dataFetch )
 
   return (
     <Layout>
       <Suspense fallback={<Loader />} >
-        <About projectsLenth={projectsLenth}/>
+        <About projectsLenth={projects.length}/>
         <MyServices/>
         <AboutMeForHome />
         <ProjectForHomePage />
