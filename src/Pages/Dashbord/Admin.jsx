@@ -4,6 +4,7 @@ import Message from '../../Components/Messages/Message';
 import ProjectAdmin from '../../Components/ProjectCartForAdminPage/ProjectAdmin';
 import axios from 'axios';
 import UploadProject from '../../Components/Upload/UploadProject';
+import { useSelector } from 'react-redux';
 
 const Admin = () => {
 
@@ -16,22 +17,7 @@ const Admin = () => {
     }, 300);
   }
 
-  const [ projects , setProject ] = useState([]);
-  const [ messages , setMessage ] = useState([]);
-
-  useEffect(()=>{
-
-    axios.get("https://main-porthfolio-backend.vercel.app/api/admin/getMessages")
-    .then( data => setMessage(data.data) )
-    .catch( err => console.log(err) );
-
-    // get data of messages
-
-    axios.get("https://main-porthfolio-backend.vercel.app/api/admin/getProjecs")
-    .then( data => setProject(data.data) )
-    .catch( err => console.log(err) );
-
-  },[]);
+  const { messages , projects } = useSelector( data => data.dataFetch )
 
 
   return (
