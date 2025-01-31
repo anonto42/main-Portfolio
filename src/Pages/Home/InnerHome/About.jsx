@@ -67,11 +67,11 @@ const differenceInYearsRounded = differenceInYears.toFixed(1);
             </div>
           </div>
           <div id='' className='animation_up_down animation_up_down01 flex justify-center items-center w-[95%] h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:-ml-[40px] md:px-8 md:bg-[#18182E] md:-mt-12 relative'>
-            <h1 className='flex justify-center font-bold md:text-[17px] mt-[10px]'>{differenceInYearsRounded}+</h1>
+            <h1 className='flex justify-center font-bold md:text-[17px] md:mt-[10px] mr-2 md:mr-0'>{differenceInYearsRounded}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px]'>Years of Experience</p>
           </div>
           <div id='' className='animation_up_down animation_up_down2 flex justify-center items-center w-[95%] mt-3 h-[80px] border-[#80b4f4] border-[3px] rounded-[30px] md:absolute md:top-[450px] md:w-[100px] md:block md:ml-[105px] md:px-8 md:bg-[#18182E] md:mt-16 relative'>
-            <h1 className='flex justify-center font-bold md:text-[17px] mt-[10px]'>{projectsLenth}+</h1>
+            <h1 className='flex justify-center font-bold md:text-[17px] md:mt-[10px] mr-2 md:mr-0'>{projectsLenth}+</h1>
             <p className='font-semibold italic md:text-[10px] md:absolute left-[21px] bottom-3'>Completed Projects</p>
           </div>
         </div>
