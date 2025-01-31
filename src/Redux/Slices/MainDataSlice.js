@@ -1,7 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-
-
-
+import { useEffect } from "react";
 
 
 
@@ -9,16 +7,16 @@ const initialState ={
     projects:[],
     messages:[]
 };
-
-
-
 const mainSlice = createSlice(
     {
         initialState,
         name:"dataFetch",
         reducers:{
-            setData: (state, action) => {
-                state.data = action.payload;
+            setDataOfProject: (state, action) => {
+                state.projects = action.payload;
+            },
+            setDataOfMessage: (state, action) => {
+                state.messages = action.payload;
             }
         }
     }
@@ -26,4 +24,4 @@ const mainSlice = createSlice(
 
 
 export default mainSlice;
-export const { setData } = mainSlice.actions
+export const { setDataOfProject , setDataOfMessage } = mainSlice.actions
