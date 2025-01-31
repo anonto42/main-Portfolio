@@ -8,8 +8,6 @@ const Project = () => {
 
   const { projects } = useSelector( data => data.dataFetch ) 
 
-  console.log(projects)
-
   return (
     <Layout>
       <div className='min-h-[10svh] w-full'>
@@ -28,7 +26,6 @@ const Project = () => {
                 <Projects />
                 <Projects />
               </>)
-              
             }
           </Suspense>
         </div>
