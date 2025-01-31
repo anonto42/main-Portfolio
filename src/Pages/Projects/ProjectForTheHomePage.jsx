@@ -16,9 +16,15 @@ const ProjectForTheHomePage = () => {
         <div className='w-full h-auto flex justify-center flex-wrap'>
           <Suspense fallback={<Loader/>}>
             {
-              projects.map( (e,i) => 
-                <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />
-              )
+              projects.length != 0 ?(
+               projects.map((e,i) =>
+                <Projects key={i}   title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />
+              )):(
+              <>
+                <Projects />
+                <Projects />
+                <Projects />
+              </>)
             }
           </Suspense> 
         </div>
