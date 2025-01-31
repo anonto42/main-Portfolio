@@ -1,24 +1,11 @@
-import React, { Suspense, useEffect, useState } from 'react'
-import Projects from './Cart/Projects';
-import axios from 'axios';
+import React, { Suspense } from 'react'
 import Loader from '../../Components/Loader/Loader';
+import { useSelector } from 'react-redux';
+const Projects = React.lazy(()=>import('./Cart/Projects'));
 
 const ProjectForTheHomePage = () => {
 
-  const [ProjectsData, setData] = useState([]);
-
-  useEffect(()=>{
-    axios.get("https://main-porthfolio-backend.vercel.app/api/admin/getProjecs")
-    .then(response => {
-      const result = response.data;
-      if (Array.isArray(result)) {
-        setData(result);
-      } else {
-        console.error('Expected an array but got:', result);
-      }
-    })
-    .catch( data => console.log(data));
-  },[]);
+  const { projects } = useSelector( data => data.dataFetch ) 
 
   return (
     <div>
@@ -27,14 +14,13 @@ const ProjectForTheHomePage = () => {
           <div className=''>Projects</div>
         </div>
         <div className='w-full h-auto flex justify-center flex-wrap'>
-          <Suspense fallback={<Loader/>} >
+          <Suspense fallback={<Loader/>}>
             {
-              ProjectsData.map( (e,i) => <Suspense fallback={<Loader/>}>
+              projects.map( (e,i) => 
                 <Projects key={i} title={e.title} imgUrl={e.frontImage} liveLink={e.liveLink} repoLink={e.sorceCode} />
-              </Suspense> 
               )
             }
-          </Suspense>
+          </Suspense> 
         </div>
       </div>
     </div>
