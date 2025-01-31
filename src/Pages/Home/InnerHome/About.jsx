@@ -1,8 +1,7 @@
 import { useGSAP } from '@gsap/react'
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import gsap from 'gsap'
 import { BsEmojiSunglassesFill } from 'react-icons/bs'
-import axios from 'axios'
 
 const About = ({projectsLenth}) => {
 
@@ -14,6 +13,8 @@ const About = ({projectsLenth}) => {
       opacity:0
     });
   })
+
+  const [load,setLoad] = useState(false)
 
 
 const currentDate = new Date();
@@ -28,8 +29,17 @@ const differenceInYearsRounded = differenceInYears.toFixed(1);
 
   return (
     <div className='h-auto w-full mt-7 md:mt-16'>
-      <div className='w-[290px] h-[290px] sm:h-[350px] sm:w-[350px] md:hidden mx-auto border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden bg-[#99afd886]'>
-        <img src="/Profile.png" className='sm:w-[500px] contrast-[1.25]' alt="" /> 
+      <div className='w-[290px] h-[290px] sm:h-[350px] sm:w-[350px] md:hidden mx-auto border-[3px] border-[#80b4f4] rounded-full flex justify-center items-center py-4 overflow-hidden bg-[#99afd886] relative'>
+        <div
+          className={`w-full h-full bg-slate-50 absolute sm:w-[500px] ease-in-out duration-150 ${!load?"opacity-100":"opacity-0"} z-10`}
+        ></div>
+        <img 
+          src="/Profile.png" 
+          className='sm:w-[500px] contrast-[1.25]' 
+          alt="" 
+          loading='lazy'
+          onLoad={()=>setLoad(true)}
+          /> 
       </div>
       <div className='text-white mt-3 md:flex justify-between'>
         <div className='mb-3 md:w-[350px] lg:min-w-[400px] md:max-w-[600px] md:mt-[110px]'>
@@ -44,7 +54,15 @@ const differenceInYearsRounded = differenceInYears.toFixed(1);
         <div>
           <div className='image hidden md:block'>
             <div className='w-[500px] h-[500px] rounded-full border-[3px] border-[#80b4f4] flex justify-center overflow-hidden relative bg-[#99afd886]'>
-              <img src="/Profile.png" className='mr-8' alt="" />
+              <div
+                className={`w-full h-full bg-white absolute ease-in-out duration-150 z-10 ${!load?"opacity-100":"opacity-0"}`}
+              ></div>
+              <img 
+                src="/Profile.png" 
+                loading='lazy'
+                onLoad={()=>setLoad(true)}
+                className='mr-8' 
+                alt="" />
               <BsEmojiSunglassesFill className=' hidden absolute top-[290px] left-[140px] border-2 shadow-md border-[#80b4f4] text-[#80b4f4] text-[40px] bg-white rounded-full' />
             </div>
           </div>
