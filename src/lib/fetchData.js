@@ -4,11 +4,6 @@ import { useDispatch, useSelector } from "react-redux";
 import { toast } from "react-toastify";
 import { setDataOfProject , setDataOfMessage } from "../Redux/Slices/MainDataSlice";
 
-
-
-
-
-
 const libDataFetch = () => {
     try {
             const [ projects , setProjects ] = useState([]);
@@ -18,8 +13,10 @@ const libDataFetch = () => {
         useEffect(()=>{
             
             axios.get('https://main-porthfolio-backend.vercel.app/api/admin/getProjecs')
-            .then( e => setProjects(e.data))
-            .catch( e => console.log(e))
+                 .then( receive => setProjects(receive.data))
+
+            axios.get("https://main-porthfolio-backend.vercel.app/api/admin/getMessages")
+                 .then( receive => setMessages(receive.data) )
             
         },[]);
         
