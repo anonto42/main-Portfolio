@@ -32,7 +32,7 @@ const Naveber = () => {
                     <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Project</h3>
                 </a>
                 <a href="/contact-me">
-                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Poke Me</h3>
+                    <h3 className='hover:bg-[#232323] duration-300 ease-out hover:px-3 hover:text-white font-semibold cursor-pointer px-1 my-2 py-2 w-[95%] mx-auto rounded-xl text-[16px]'>Contact me</h3>
                 </a>
             </div>
             <div onClick={()=>navFunction()} className='md:hidden right-5 top-5 fixed w-[45px] h-[35px] cursor-pointer bg-[#80b4f4] shadow-md shadow-[#ffffff7b] z-50 rounded-xl flex justify-center items-center text-white text-[22px] font-thin active:scale-[1.35] duration-[1s]'>
@@ -48,7 +48,7 @@ const Naveber = () => {
                 </div>
                 <div className='flex'>
                     <a href="/">
-                        <div className='bg-[] mr-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Home</div>
+                        <div className='mr-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>Home</div>
                     </a>
                     <a href="/aboute/me">
                         <div className='bg-[] mx-4 w-[105px] h-[40px] flex justify-center items-center rounded-full hover:text-[#2e2e2e] text-[17px] font-semibold duration-150 ease-linear cursor-pointer hover:bg-[#80b4f4] hover:shadow-md hover:shadow-[#ffffff7b]'>About Me</div>
